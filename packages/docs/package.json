@@ -12,8 +12,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "markdown-to-jsx": "^6.11.4",
-    "react-chartjs-2": "^3.3.0",
-    "example": "workspace:*"
+    "react-chartjs-2": "^3.3.0"
   },
   "devDependencies": {
     "@reach/skip-nav": "^0.18.0",

@@ -10,6 +10,7 @@ lerna-debug.log*
 # dependencies
 **/node_modules
 **/dist
+dist
 dist-ssr
 *.local
 **/.next
@@ -23,3 +24,5 @@ dist-ssr
 *.sw?
 **/es/
 **/lib/
+es/
+lib/
