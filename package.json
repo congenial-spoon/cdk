@@ -4,16 +4,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently 'pnpm:dev:*'",
+    "dev:doc": "pnpm --filter ./packages/docs dev",
+    "dev:example": "pnpm --filter ./packages/example dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Siirtotyolaiset/component-library-template.git"
+  "devDependencies": {
+    "concurrently": "^7.4.0",
+    "@types/node": "^18.8.5"
   },
-  "author": "",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/Siirtotyolaiset/component-library-template/issues"
-  },
-  "homepage": "https://github.com/Siirtotyolaiset/component-library-template#readme"
+  "license": "Apache-2.0"
 }
