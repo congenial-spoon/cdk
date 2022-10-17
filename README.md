@@ -1,4 +1,4 @@
-# component-library-template
+# @stlt/cdk
 
 组件库开发模板
 

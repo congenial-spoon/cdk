@@ -1,16 +1,19 @@
 {
-  "name": "component-library-template",
+  "name": "@stlt/cdk-monorepo",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "dev": "concurrently 'pnpm:dev:*'",
-    "dev:doc": "pnpm --filter ./packages/docs dev",
-    "dev:example": "pnpm --filter ./packages/example dev"
+    "dev:doc": "pnpm --filter ./packages/stlt-docs dev",
+    "dev:stlt": "pnpm --filter ./packages/stlt-cdk dev"
   },
   "devDependencies": {
-    "concurrently": "^7.4.0",
-    "@types/node": "^18.8.5"
+    "@types/node": "^18.8.5",
+    "concurrently": "^7.4.0"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
 }

@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "declarationDir": "dist",
+    "target": "ES6",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES6"
+    ],
+    "outDir": "dist",
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ES6",
+    "moduleResolution": "Node",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "noEmitOnError": true,
+    "jsx": "react"
+  },
+  "include": [
+    "src",
+    "typings.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "test/types",
+    "__tests__"
+  ],
+}
