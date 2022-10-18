@@ -19,8 +19,8 @@ function walkSync(currentDirPath, callback) {
 }
 
 let allIcons = []
-walkSync('../src/assets', function (filePath, stat) {
-  const iconItem = filePath.replace('../src/assets/', '').split('/')
+walkSync('../src/svg', function (filePath, stat) {
+  const iconItem = filePath.replace('../src/svg/', '').split('/')
   testObg.forEach((item) => {
     if (item.name === iconItem[0]) {
       item.items.push(iconItem[1].replace('.svg', ''))

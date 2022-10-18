@@ -1,8 +1,11 @@
-import * as React from "react";
-const SvgAndroidFill = (props) => (
+import * as React from 'react';
+import { SVGProps } from 'react';
+const SvgAndroidFill = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
+    width="1em"
+    height="1em"
     role="img"
     {...props}
   >

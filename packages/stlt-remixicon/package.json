@@ -17,10 +17,12 @@
   ],
   "scripts": {
     "build": "gulp",
-    "export": "node ./scripts/export.js && npx @svgr/cli -d src/icons src/svg",
-    "prepack": "npm run build"
+    "svgr": "svgr --out-dir src/icons --ignore-existing  -- src/svg",
+    "prepack": "npm run build",
+    "test": "svgr -- src/svg/Buildings/ancient-gate-fill.svg > dist/ancient-gate-fill.js"
   },
   "dependencies": {
+    "@svgr/cli": "6.5.0",
     "remixicon": "2.5.0"
   },
   "devDependencies": {
