@@ -1,10 +1,15 @@
 # @stlt/cdk
 
-组件库开发模板
+cdk fro stlt 
 
-- package/docs docs-website
-## Built Using
 
-- [Next.js](https://nextjs.org?utm_source=swc)
-- [Nextra](https://nextra.vercel.app)
-- [Vercel](https://vercel.com?utm_source=swc)
+## Packages
+
+| Package                                  | Version (click for changelogs) | 
+|------------------------------------------|--------------------------------|
+| [stlt-cdk](package/stlt-cdk)             | 0.0.0                          | 
+| [stlt-docs](package/stlt-docs)           | 0.0.0                          | 
+| [stlt-remixicon](package/stlt-remixicon) | 0.0.1                          | 
+
+## License
+Apache-2.0
