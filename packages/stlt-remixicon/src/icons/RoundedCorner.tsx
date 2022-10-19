@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
-const SvgRoundedCorner = (props: SVGProps<SVGSVGElement>) => (
+import IconBase, { IconBasePropsType } from './IconBase';
+const SvgIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -12,5 +13,14 @@ const SvgRoundedCorner = (props: SVGProps<SVGSVGElement>) => (
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M21 19v2h-2v-2h2zm-4 0v2h-2v-2h2zm-4 0v2h-2v-2h2zm-4 0v2H7v-2h2zm-4 0v2H3v-2h2zm16-4v2h-2v-2h2zM5 15v2H3v-2h2zm0-4v2H3v-2h2zm11-8a5.002 5.002 0 0 1 4.995 4.783L21 8v5h-2V8a3.01 3.01 0 0 0-2.824-2.995L16 5h-5V3h5zM5 7v2H3V7h2zm0-4v2H3V3h2zm4 0v2H7V3h2z" />
   </svg>
+);
+const SvgRoundedCorner = React.forwardRef<SVGSVGElement, Omit<IconBasePropsType, 'name'>>(
+  (props, ref) => {
+    return (
+      <IconBase name="SvgRoundedCorner" {...props} ref={ref}>
+        <SvgIcon />
+      </IconBase>
+    );
+  },
 );
 export default SvgRoundedCorner;

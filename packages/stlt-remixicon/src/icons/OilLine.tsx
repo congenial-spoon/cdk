@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
-const SvgOilLine = (props: SVGProps<SVGSVGElement>) => (
+import IconBase, { IconBasePropsType } from './IconBase';
+const SvgIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -12,5 +13,14 @@ const SvgOilLine = (props: SVGProps<SVGSVGElement>) => (
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M9.07 7 6 11.606V20h12V7H9.07zM8 5h11a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V11l4-6zm5-4h5a1 1 0 0 1 1 1v2h-7V2a1 1 0 0 1 1-1zM8 12h2v6H8v-6z" />
   </svg>
+);
+const SvgOilLine = React.forwardRef<SVGSVGElement, Omit<IconBasePropsType, 'name'>>(
+  (props, ref) => {
+    return (
+      <IconBase name="SvgOilLine" {...props} ref={ref}>
+        <SvgIcon />
+      </IconBase>
+    );
+  },
 );
 export default SvgOilLine;

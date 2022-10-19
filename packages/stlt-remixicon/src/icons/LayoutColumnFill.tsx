@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
-const SvgLayoutColumnFill = (props: SVGProps<SVGSVGElement>) => (
+import IconBase, { IconBasePropsType } from './IconBase';
+const SvgIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -12,5 +13,14 @@ const SvgLayoutColumnFill = (props: SVGProps<SVGSVGElement>) => (
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M12 5v14h7V5h-7zM4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" />
   </svg>
+);
+const SvgLayoutColumnFill = React.forwardRef<SVGSVGElement, Omit<IconBasePropsType, 'name'>>(
+  (props, ref) => {
+    return (
+      <IconBase name="SvgLayoutColumnFill" {...props} ref={ref}>
+        <SvgIcon />
+      </IconBase>
+    );
+  },
 );
 export default SvgLayoutColumnFill;

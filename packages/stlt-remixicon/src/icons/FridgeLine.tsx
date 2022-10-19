@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
-const SvgFridgeLine = (props: SVGProps<SVGSVGElement>) => (
+import IconBase, { IconBasePropsType } from './IconBase';
+const SvgIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -12,5 +13,14 @@ const SvgFridgeLine = (props: SVGProps<SVGSVGElement>) => (
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M19 1a1 1 0 0 1 1 1v20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h14zm-1 11H6v9h12v-9zm-8 2v4H8v-4h2zm8-11H6v7h12V3zm-8 2v3H8V5h2z" />
   </svg>
+);
+const SvgFridgeLine = React.forwardRef<SVGSVGElement, Omit<IconBasePropsType, 'name'>>(
+  (props, ref) => {
+    return (
+      <IconBase name="SvgFridgeLine" {...props} ref={ref}>
+        <SvgIcon />
+      </IconBase>
+    );
+  },
 );
 export default SvgFridgeLine;

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
-const SvgMailOpenLine = (props: SVGProps<SVGSVGElement>) => (
+import IconBase, { IconBasePropsType } from './IconBase';
+const SvgIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -12,5 +13,14 @@ const SvgMailOpenLine = (props: SVGProps<SVGSVGElement>) => (
     <path fill="none" d="M0 0h24v24H0z" />
     <path d="M2.243 6.854 11.49 1.31a1 1 0 0 1 1.029 0l9.238 5.545a.5.5 0 0 1 .243.429V20a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.283a.5.5 0 0 1 .243-.429zM4 8.133V19h16V8.132l-7.996-4.8L4 8.132zm8.06 5.565 5.296-4.463 1.288 1.53-6.57 5.537-6.71-5.53 1.272-1.544 5.424 4.47z" />
   </svg>
+);
+const SvgMailOpenLine = React.forwardRef<SVGSVGElement, Omit<IconBasePropsType, 'name'>>(
+  (props, ref) => {
+    return (
+      <IconBase name="SvgMailOpenLine" {...props} ref={ref}>
+        <SvgIcon />
+      </IconBase>
+    );
+  },
 );
 export default SvgMailOpenLine;

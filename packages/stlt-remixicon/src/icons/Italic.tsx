@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
-const SvgItalic = (props: SVGProps<SVGSVGElement>) => (
+import IconBase, { IconBasePropsType } from './IconBase';
+const SvgIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -13,4 +14,11 @@ const SvgItalic = (props: SVGProps<SVGSVGElement>) => (
     <path d="M15 20H7v-2h2.927l2.116-12H9V4h8v2h-2.927l-2.116 12H15z" />
   </svg>
 );
+const SvgItalic = React.forwardRef<SVGSVGElement, Omit<IconBasePropsType, 'name'>>((props, ref) => {
+  return (
+    <IconBase name="SvgItalic" {...props} ref={ref}>
+      <SvgIcon />
+    </IconBase>
+  );
+});
 export default SvgItalic;

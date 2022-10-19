@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
-const SvgText = (props: SVGProps<SVGSVGElement>) => (
+import IconBase, { IconBasePropsType } from './IconBase';
+const SvgIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -13,4 +14,11 @@ const SvgText = (props: SVGProps<SVGSVGElement>) => (
     <path d="M13 6v15h-2V6H5V4h14v2z" />
   </svg>
 );
+const SvgText = React.forwardRef<SVGSVGElement, Omit<IconBasePropsType, 'name'>>((props, ref) => {
+  return (
+    <IconBase name="SvgText" {...props} ref={ref}>
+      <SvgIcon />
+    </IconBase>
+  );
+});
 export default SvgText;

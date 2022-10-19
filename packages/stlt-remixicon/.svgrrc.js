@@ -10,23 +10,23 @@ module.exports = {
   // expandProps: 'end',
   ext:"tsx",
   outDir: './src/icons',
-//   template: (variables, {tpl}) => {
-//     return tpl`
-// ${variables.imports};
-//
-// ${variables.interfaces};
-// import IconBase, {IconBasePropsType} from './IconBase';
-// const SvgIcon = (${variables.props}) => (
-//   ${variables.jsx}
-// );
-// const ${variables.componentName} = React.forwardRef<SVGSVGElement>((props, ref)=>{
-//     return (
-//     <IconBase {...props} ref={ref}>
-//       <SvgIcon/>
-//     </IconBase>
-//     )
-// })
-// ${variables.exports};
-// `
-//   }
+  template: (variables, {tpl}) => {
+    return tpl`
+${variables.imports};
+
+${variables.interfaces};
+import IconBase, {IconBasePropsType} from './IconBase';
+const SvgIcon = (${variables.props}) => (
+  ${variables.jsx}
+);
+const ${variables.componentName} = React.forwardRef<SVGSVGElement,Omit<IconBasePropsType,'name'>>((props, ref)=>{
+    return (
+    <IconBase name='${variables.componentName}' {...props} ref={ref}>
+      <SvgIcon/>
+    </IconBase>
+    )
+})
+${variables.exports};
+`
+  }
 };
