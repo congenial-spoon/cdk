@@ -1,16 +1,17 @@
 {
-  "name": "@stlt/cdk-monorepo",
+  "name": "congenial-spoon-monorepo",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "dev": "concurrently 'pnpm:dev:*'",
-    "dev:doc": "pnpm --filter ./packages/stlt-docs dev",
-    "dev:stlt": "pnpm --filter ./packages/stlt-cdk dev"
+    "dev:doc": "pnpm --filter ./packages/docs dev",
+    "dev:cdk": "pnpm --filter ./packages/cdk dev"
   },
   "devDependencies": {
     "@types/node": "^18.8.5",
-    "concurrently": "^7.4.0"
+    "concurrently": "^7.4.0",
+    "pnpm-deduplicate": "^0.3.1"
   },
   "license": "Apache-2.0",
   "dependencies": {
