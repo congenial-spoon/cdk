@@ -28,7 +28,7 @@ function CodeBlock(props) {
     mountStylesheet = false,
   } = props.children.props
 
-  const _live = live === 'true' || live === true
+  const _live = live === 'true' || live
 
   const language = className?.replace(/language-/, '')
   const rawCode = children.trim()
@@ -41,7 +41,8 @@ function CodeBlock(props) {
     mountStylesheet,
   }
 
-  if (isMounted && language === 'jsx' && _live === true) {
+  if (isMounted && language === 'jsx' ||language === 'tsx' && _live) {
+    console.log('reactLiveBlockProps',reactLiveBlockProps)
     return <ReactLiveBlock editable {...reactLiveBlockProps} />
   }
 

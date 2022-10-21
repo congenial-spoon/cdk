@@ -1,1 +1,1 @@
-# @stlt/cdk-docs
+# @congenial-spoon/cdk-docs

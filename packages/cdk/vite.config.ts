@@ -1,9 +1,16 @@
 import { defineConfig } from "vite";
+
 const packageJson = require("./package.json");
 const external = [...Object.keys(packageJson.peerDependencies || {})];
-const entry = "./src/index.ts";
+const entry = "./src/index.tsx";
 import dts from "vite-plugin-dts";
+
 export default defineConfig({
+  resolve:{
+    alias: {
+      '@congenial-spoon/cdk': entry
+    },
+  },
   build: {
     emptyOutDir: true,
     lib: {

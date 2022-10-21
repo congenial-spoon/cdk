@@ -1,0 +1,9 @@
+**/node_modules
+**/.next
+**/.contentlayer
+.turbo
+
+**/es
+**/lib
+**/dist
+

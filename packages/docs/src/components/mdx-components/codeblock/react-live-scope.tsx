@@ -2,6 +2,7 @@ import * as Icons from '@chakra-ui/icons'
 import { chakra } from '@chakra-ui/react'
 import * as Chakra from '@chakra-ui/react'
 import * as Formik from 'formik'
+import * as CDK from "@congenial-spoon/cdk"
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import { AiOutlineUser } from 'react-icons/ai'
@@ -52,6 +53,7 @@ const ReactLiveScope = {
   ...Icons,
   ...Loaders,
   ...reactIcons,
+  ...CDK,
   StarIcon,
   FocusLock,
   Lorem,

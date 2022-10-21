@@ -37,6 +37,7 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "@congenial-spoon/react-icon": "workspace:*",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@rollup/plugin-commonjs": "^22.0.2",
@@ -66,9 +67,12 @@
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.5.4",
     "vite": "^2.9.15",
-    "vite-plugin-dts": "^1.6.6"
+    "vite-plugin-dts": "^1.6.6",
+    "@tiptap/extension-task-item": "2.0.0-beta.199",
+    "@tiptap/extension-task-list": "2.0.0-beta.199"
   },
   "peerDependencies": {
+    "@congenial-spoon/react-icon": "workspace:*",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@tiptap/extension-character-count": "2.0.0-beta.199",
@@ -80,12 +84,15 @@
     "@tiptap/starter-kit": "2.0.0-beta.199",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "react-icons": "^4.6.0"
+    "react-icons": "^4.6.0",
+    "@tiptap/extension-task-item": "2.0.0-beta.199",
+    "@tiptap/extension-task-list": "2.0.0-beta.199"
   },
   "engines": {
     "node": ">= 16"
   },
   "dependencies": {
+
     "gulp": "^4.0.2",
     "through": "^2.3.8"
   }

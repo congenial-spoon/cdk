@@ -43,7 +43,7 @@ function HeaderContent() {
         <Flex align='center'>
           <NextLink href='/' passHref>
             <chakra.a display='block' aria-label='Chakra UI, Back to homepage'>
-              @stlt/cdk
+              @congenial-spoon/cdk
               {/* <Logo display={{ base: 'none', md: 'block' }} /> */}
               {/* <Box minW='3rem' display={{ base: 'block', md: 'none' }}>
                 <LogoIcon />
