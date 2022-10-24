@@ -1,0 +1,22 @@
+{
+  "name": "@congenial-spoon/cdk-mobile",
+  "version": "0.0.1",
+  "description": "A base React component for icons",
+  "keywords": [],
+  "sideEffects": false,
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {},
+  "scripts": {
+    "build": "JSX=1 tsup src/index.ts --dts",
+    "dev": "pnpm build -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "JSX=1 tsup src/index.ts"
+  }
+}

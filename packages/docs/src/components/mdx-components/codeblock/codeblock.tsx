@@ -1,12 +1,12 @@
-import { Box, useBoolean } from '@chakra-ui/react'
-import dynamic from 'next/dynamic'
-import theme from 'prism-react-renderer/themes/nightOwl'
-import React, { useEffect } from 'react'
-import CodeContainer from './code-container'
-import CopyButton from './copy-button'
-import Highlight from './highlight'
+import { Box, useBoolean } from "@chakra-ui/react"
+import dynamic from "next/dynamic"
+import theme from "prism-react-renderer/themes/nightOwl"
+import React, { useEffect } from "react"
+import CodeContainer from "./code-container"
+import CopyButton from "./copy-button"
+import Highlight from "./highlight"
 
-const ReactLiveBlock = dynamic(() => import('./react-live-block'))
+const ReactLiveBlock = dynamic(() => import("./react-live-block"))
 
 function CodeBlock(props) {
   const [isMounted, { on }] = useBoolean()
@@ -28,9 +28,9 @@ function CodeBlock(props) {
     mountStylesheet = false,
   } = props.children.props
 
-  const _live = live === 'true' || live
+  const _live = live === "true" || live
 
-  const language = className?.replace(/language-/, '')
+  const language = className?.replace(/language-/, "")
   const rawCode = children.trim()
 
   const reactLiveBlockProps = {
@@ -41,8 +41,7 @@ function CodeBlock(props) {
     mountStylesheet,
   }
 
-  if (isMounted && language === 'jsx' ||language === 'tsx' && _live) {
-    console.log('reactLiveBlockProps',reactLiveBlockProps)
+  if ((isMounted && language === "jsx") || (language === "tsx" && _live)) {
     return <ReactLiveBlock editable {...reactLiveBlockProps} />
   }
 
@@ -58,8 +57,8 @@ function CodeBlock(props) {
   }
 
   return (
-    <Box position='relative' zIndex='0'>
-      <CodeContainer px='0' overflow='hidden'>
+    <Box position="relative" zIndex="0">
+      <CodeContainer px="0" overflow="hidden">
         <Highlight
           codeString={rawCode}
           language={language}
@@ -68,7 +67,7 @@ function CodeBlock(props) {
           showLines={viewlines}
         />
       </CodeContainer>
-      <CopyButton top='4' code={rawCode} />
+      <CopyButton top="4" code={rawCode} />
     </Box>
   )
 }

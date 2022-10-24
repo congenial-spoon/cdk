@@ -16,6 +16,7 @@
     "README.md"
   ],
   "scripts": {
+    "build:tsup": "JSX=1 tsup src/icons/index.tsx --dts",
     "build": "gulp",
     "svgr": "svgr --out-dir src/icons --ignore-existing  -- src/svg",
     "prepack": "npm run build",
