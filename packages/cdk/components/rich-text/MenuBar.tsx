@@ -1,6 +1,6 @@
-import { Editor } from "@tiptap/react";
-import React, { useMemo } from "react";
-import MenuItem from "./MenuItem";
+import { Editor } from "@tiptap/react"
+import React, { useMemo } from "react"
+import MenuItem from "./MenuItem"
 import {
   Bold,
   Italic,
@@ -25,9 +25,9 @@ import {
   AlignLeft,
   AlignJustify,
   ImageAddLine,
-} from "@congenial-spoon/react-icon";
-import styled from "@emotion/styled";
-
+} from "@congenial-spoon/react-icon"
+import styled from "@emotion/styled"
+import { RiBold } from "react-icons/ri"
 const Header = styled.div`
   border-bottom: 3px solid #0d0d0d;
   align-items: center;
@@ -35,14 +35,14 @@ const Header = styled.div`
   flex: 0 0 auto;
   flex-wrap: wrap;
   padding: 0.25rem;
-`;
+`
 const Divider = styled.div`
   background-color: rgba(0, 0, 0, 0.1);
   height: 1.25rem;
   margin-left: 0.5rem;
   margin-right: 0.75rem;
   width: 2px;
-`;
+`
 
 interface MenuBarProps {
   editor: Editor
@@ -53,7 +53,7 @@ export default function MenuBar({ editor }: MenuBarProps) {
     if (editor) {
       return [
         {
-          icon: Bold,
+          icon: RiBold,
           title: "Bold",
           action: () => editor.chain().focus().toggleBold().run(),
           isActive: () => editor.isActive("bold"),
@@ -88,13 +88,15 @@ export default function MenuBar({ editor }: MenuBarProps) {
         {
           icon: H1,
           title: "Heading 1",
-          action: () => editor.chain().focus().toggleHeading({ level: 1 }).run(),
+          action: () =>
+            editor.chain().focus().toggleHeading({ level: 1 }).run(),
           isActive: () => editor.isActive("heading", { level: 1 }),
         },
         {
           icon: H2,
           title: "Heading 2",
-          action: () => editor.chain().focus().toggleHeading({ level: 2 }).run(),
+          action: () =>
+            editor.chain().focus().toggleHeading({ level: 2 }).run(),
           isActive: () => editor.isActive("heading", { level: 2 }),
         },
         {
@@ -152,7 +154,8 @@ export default function MenuBar({ editor }: MenuBarProps) {
         {
           icon: FormatClear,
           title: "Clear Format",
-          action: () => editor.chain().focus().clearNodes().unsetAllMarks().run(),
+          action: () =>
+            editor.chain().focus().clearNodes().unsetAllMarks().run(),
         },
         {
           type: "divider",
@@ -188,9 +191,9 @@ export default function MenuBar({ editor }: MenuBarProps) {
           icon: ImageAddLine,
           title: "align-justify",
           action: () => {
-            const url = window.prompt("URL");
+            const url = window.prompt("URL")
             if (url) {
-              editor.chain().focus().setImage({ src: url }).run();
+              editor.chain().focus().setImage({ src: url }).run()
             }
           },
         },
@@ -207,33 +210,23 @@ export default function MenuBar({ editor }: MenuBarProps) {
           title: "Redo",
           action: () => editor.chain().focus().redo().run(),
         },
-
-        /*
-        *
-         * <button onClick={() => editor.chain().focus().setTextAlign('left').run()} className={editor.isActive({ textAlign: 'left' }) ? 'is-active' : ''}>
-            left
-          </button>
-          <button onClick={() => editor.chain().focus().setTextAlign('center').run()} className={editor.isActive({ textAlign: 'center' }) ? 'is-active' : ''}>
-            center
-          </button>
-          <button onClick={() => editor.chain().focus().setTextAlign('right').run()} className={editor.isActive({ textAlign: 'right' }) ? 'is-active' : ''}>
-            right
-          </button>
-          <button onClick={() => editor.chain().focus().setTextAlign('justify').run()} className={editor.isActive({ textAlign: 'justify' }) ? 'is-active' : ''}>
-            justify
-          </button>
-         */
       ]
     } else {
       return []
     }
-  }, [editor]);
+  }, [editor])
 
   return (
     <Header>
-      {items.length > 0 && items?.map((item, index) => item.type === "divider" ? <Divider key={index} /> :
-        <MenuItem {...item} key={index} />)}
+      {items.length > 0 &&
+        items?.map((item, index) =>
+          item.type === "divider" ? (
+            <Divider key={index} />
+          ) : (
+            <MenuItem {...item} key={index} />
+          ),
+        )}
       {/* TODO 字数统计 */}
     </Header>
-  );
+  )
 }

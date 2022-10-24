@@ -1,7 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { withContentlayer } = require('next-contentlayer')
-
-module.exports = withContentlayer({
+const {withContentlayer} = require('next-contentlayer')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+});
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   optimizeFonts: true,
   images: {
     domains: [
@@ -17,5 +20,8 @@ module.exports = withContentlayer({
   },
   productionBrowserSourceMaps: true,
   redirects: require('./next-redirect'),
-  reactStrictMode: true,
+  reactStrictMode: true
+}
+module.exports = withContentlayer({
+  ...nextConfig
 })

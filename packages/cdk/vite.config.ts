@@ -1,14 +1,14 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vite"
 
-const packageJson = require("./package.json");
-const external = [...Object.keys(packageJson.peerDependencies || {})];
-const entry = "./src/index.tsx";
-import dts from "vite-plugin-dts";
+const packageJson = require("./package.json")
+const external = [...Object.keys(packageJson.peerDependencies || {})]
+const entry = "./components/index.tsx"
+import dts from "vite-plugin-dts"
 
 export default defineConfig({
-  resolve:{
+  resolve: {
     alias: {
-      '@congenial-spoon/cdk': entry
+      "@congenial-spoon/cdk": entry,
     },
   },
   build: {
@@ -55,4 +55,4 @@ export default defineConfig({
       tsConfigFilePath: "./tsconfig.json",
     }),
   ],
-});
+})

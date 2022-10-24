@@ -20,6 +20,18 @@
               "path": "/docs/components/rich-text"
             }
           ]
+        },{
+          "title": "Data Display",
+          "path": "/docs/components/data-display",
+          "open": true,
+          "sort": true,
+          "summarize": true,
+          "routes":[
+            {
+              "title": "WecomFriend",
+              "path": "/docs/components/wecom-friend"
+            }
+          ]
         }
       ]
     }

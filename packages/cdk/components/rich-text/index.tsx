@@ -1,20 +1,19 @@
-import CharacterCount from "@tiptap/extension-character-count";
-import Highlight from "@tiptap/extension-highlight";
+import CharacterCount from "@tiptap/extension-character-count"
+import Highlight from "@tiptap/extension-highlight"
 import {
   EditorContent,
   useEditor,
   FloatingMenu as TiptapFloatingMenu,
   BubbleMenu as TiptapBubbleMenu,
-} from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
-import TextAlign from "@tiptap/extension-text-align";
-import Image from "@tiptap/extension-image";
-import React, { useEffect } from "react";
-import Gapcursor from "@tiptap/extension-gapcursor";
-import styled from "@emotion/styled";
-import MenuBar from "./MenuBar";
-import TaskItem from '@tiptap/extension-task-item'
-import TaskList from '@tiptap/extension-task-list'
+} from "@tiptap/react"
+import StarterKit from "@tiptap/starter-kit"
+import TextAlign from "@tiptap/extension-text-align"
+import Image from "@tiptap/extension-image"
+import React, { useEffect } from "react"
+import styled from "@emotion/styled"
+import MenuBar from "./MenuBar"
+import TaskItem from "@tiptap/extension-task-item"
+import TaskList from "@tiptap/extension-task-list"
 
 const FloatingMenu = styled(TiptapFloatingMenu)`
   display: flex;
@@ -35,18 +34,23 @@ const FloatingMenu = styled(TiptapFloatingMenu)`
       opacity: 1;
     }
   }
-`;
+`
 
 export interface RichTextProps {
   content?: string
-  isEditable?: boolean,
+  isEditable?: boolean
   setIsEditable?: () => void
   bubbleMenu?: boolean
   floatingMenu?: boolean
 }
 
 function RichText(props: RichTextProps) {
-  const { content, isEditable = true, bubbleMenu = false, floatingMenu = false } = props
+  const {
+    content,
+    isEditable = true,
+    bubbleMenu = false,
+    floatingMenu = false,
+  } = props
   const editor = useEditor({
     extensions: [
       StarterKit.configure({
@@ -66,13 +70,13 @@ function RichText(props: RichTextProps) {
       }),
     ],
     content,
-  });
+  })
 
   useEffect(() => {
     if (editor) {
-      editor.setEditable(isEditable);
+      editor.setEditable(isEditable)
     }
-  }, [isEditable, editor]);
+  }, [isEditable, editor])
 
   return (
     <div className="editor">
@@ -139,7 +143,7 @@ function RichText(props: RichTextProps) {
         </FloatingMenu>
       )}
     </div>
-  );
+  )
 }
 
 export default RichText

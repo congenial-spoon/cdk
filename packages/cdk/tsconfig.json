@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "rootDir": "src",
+    "rootDir": "components",
     "declarationDir": "dist",
     "target": "ES6",
     "lib": [
@@ -30,8 +30,9 @@
     "jsx": "react"
   },
   "include": [
-    "src",
-    "typings.d.ts"
+    "components",
+    "typings.d.ts",
+    "components/index.tsx"
   ],
   "exclude": [
     "dist",
