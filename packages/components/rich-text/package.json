@@ -1,0 +1,79 @@
+{
+  "name": "@spoon/cdk",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "license": "Apache-2.0",
+  "author": "",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "JSX=1 tsup components/index.ts --dts",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "JSX=1 tsup components/index.ts"
+  },
+  "devDependencies": {
+    "@spoon/react-icon": "workspace:*",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@tiptap/extension-character-count": "2.0.0-beta.199",
+    "@tiptap/extension-gapcursor": "2.0.0-beta.199",
+    "@tiptap/extension-highlight": "2.0.0-beta.199",
+    "@tiptap/extension-image": "2.0.0-beta.199",
+    "@tiptap/extension-task-item": "2.0.0-beta.199",
+    "@tiptap/extension-task-list": "2.0.0-beta.199",
+    "@tiptap/extension-text-align": "2.0.0-beta.199",
+    "@tiptap/react": "2.0.0-beta.199",
+    "@tiptap/starter-kit": "2.0.0-beta.199",
+    "@types/node": "18.7.23",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.8",
+    "less": "^4.1.3",
+    "less-plugin-npm-import": "^2.1.0",
+    "postcss": "^8.4.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.6.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "vite": "^2.9.15",
+    "vite-plugin-dts": "^1.6.6"
+  },
+  "peerDependencies": {
+    "@spoon/react-icon": "workspace:*",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@tiptap/extension-character-count": "2.0.0-beta.199",
+    "@tiptap/extension-gapcursor": "2.0.0-beta.199",
+    "@tiptap/extension-highlight": "2.0.0-beta.199",
+    "@tiptap/extension-image": "2.0.0-beta.199",
+    "@tiptap/extension-task-item": "2.0.0-beta.199",
+    "@tiptap/extension-task-list": "2.0.0-beta.199",
+    "@tiptap/extension-text-align": "2.0.0-beta.199",
+    "@tiptap/react": "2.0.0-beta.199",
+    "@tiptap/starter-kit": "2.0.0-beta.199",
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "react-icons": "^4.6.0"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "through": "^2.3.8"
+  }
+}
