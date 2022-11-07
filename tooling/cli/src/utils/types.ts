@@ -1,6 +1,3 @@
-export interface BuildConfig {
+export interface IConfig {
   out: string;
-}
-export function defineBuildConfig(config: BuildConfig): BuildConfig {
-  return config;
 }

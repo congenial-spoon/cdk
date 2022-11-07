@@ -1,8 +1,8 @@
-import React from "react"
-import RichText from "../index"
+import React from 'react';
+import { RichText } from '../src';
 export default {
-  title: "Components / Form / 富文本",
+  title: 'Components / Form / 富文本',
   component: RichText,
-}
+};
 
-export const Basic = () => <RichText content="storybook" />
+export const Basic = () => <RichText content="storybook" />;

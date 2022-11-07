@@ -1,43 +1,4 @@
 {
-  "compilerOptions": {
-    "rootDir": "components",
-    "declarationDir": "dist",
-    "target": "ES6",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES6"
-    ],
-    "outDir": "dist",
-    "allowJs": false,
-    "skipLibCheck": true,
-    "strictNullChecks": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ES6",
-    "moduleResolution": "Node",
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noImplicitAny": true,
-    "resolveJsonModule": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "isolatedModules": true,
-    "declaration": true,
-    "noEmitOnError": true,
-    "jsx": "react"
-  },
-  "include": [
-    "components",
-    "typings.d.ts",
-    "components/index.tsx"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules",
-    "test/types",
-    "__tests__"
-  ],
+  "extends": "../../../tsconfig.json",
+  "include": ["src", "index.ts"]
 }

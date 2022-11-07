@@ -25,7 +25,7 @@ import MenuItem from './MenuItem';
 //   AlignLeft,
 //   AlignJustify,
 //   ImageAddLine,
-// } from "@@spoon/cdk/react-icon"
+// } from "@@cuiller/cdk/react-icon"
 import styled from '@emotion/styled';
 import {
   RiBold,

@@ -1,4 +1,4 @@
-const capitalize = (str: string) => {
+const capitalize = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 const path = require('node:path');
@@ -12,7 +12,7 @@ const workspaces = ['packages', 'hooks', 'utilities'];
  * @param {import("plop").NodePlopAPI} plop
  */
 module.exports = function main(plop) {
-  plop.setHelper('capitalize', (text: string) => {
+  plop.setHelper('capitalize', (text) => {
     return capitalize(camelCase(text));
   });
 
@@ -21,33 +21,37 @@ module.exports = function main(plop) {
     prompts: [
       {
         type: 'input',
+        name: 'description1',
+        message: 'The description of this component!!!!!:',
+      },
+      {
+        type: 'input',
         name: 'componentName',
         message: 'Enter component name:',
       },
-      // {
-      //   type: 'input',
-      //   name: 'description',
-      //   message: 'The description of this component:',
-      // },
-      // {
-      //   type: 'list',
-      //   name: 'outDir',
-      //   message: 'where should this component or package live?',
-      //   default: 'packages',
-      //   choices: workspaces,
-      // },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'The description of this component:',
+      },
+      {
+        type: 'list',
+        name: 'outDir',
+        message: 'where should this component or package live?',
+        default: 'packages',
+        choices: workspaces,
+      },
     ],
     actions(answers) {
       const actions = [];
       if (!answers) return actions;
       const { componentName, description, outDir } = answers;
       console.log({ componentName, description, outDir });
-      // const outDi = path.join(process.cwd(), outDir);
       actions.push({
         type: 'addMany',
-        templateFiles: './src/template/marketing-activities/**',
+        templateFiles: 'src/template/marketing-activities/**',
         destination: `${process.cwd()}/{{outDir}}/{{dashCase componentName}}`,
-        // base: '',
+        base: 'src/template/marketing-activities',
         data: { description, componentName, outDir },
         abortOnFail: true,
       });

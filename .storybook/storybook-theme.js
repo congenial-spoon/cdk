@@ -2,6 +2,6 @@ import { create } from "@storybook/theming"
 
 export default create({
   base: "light",
-  brandTitle: "Congenial Spoon CDK",
+  brandTitle: "Congenial cuiller CDK",
   brandUrl: "https://chakra-ui.com",
 })

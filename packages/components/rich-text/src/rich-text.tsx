@@ -44,7 +44,7 @@ export interface RichTextProps {
   floatingMenu?: boolean
 }
 
-function RichText(props: RichTextProps) {
+export function RichText(props: RichTextProps) {
   const {
     content,
     isEditable = true,
@@ -146,4 +146,4 @@ function RichText(props: RichTextProps) {
   )
 }
 
-export default RichText
+
