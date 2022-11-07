@@ -16,7 +16,7 @@
     "changelog:format": "prettier --write .changelog",
     "create:pkg": "plop component",
     "storybook": "start-storybook -p 7006",
-    "release": "changeset publish --otp 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",
+    "release": "changeset publish",
     "release:dev": "changeset publish --tag dev",
     "version": "changeset version"
   },

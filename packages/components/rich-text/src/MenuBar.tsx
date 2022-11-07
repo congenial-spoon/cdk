@@ -1,31 +1,6 @@
 import { Editor } from '@tiptap/react';
 import React, { useMemo } from 'react';
 import MenuItem from './MenuItem';
-// import {
-//   Bold,
-//   Italic,
-//   StackFill,
-//   CodeFill,
-//   MarkPenLine,
-//   H1,
-//   H2,
-//   Paragraph,
-//   ListUnordered,
-//   ListOrdered,
-//   ListCheck2,
-//   CodeBoxLine,
-//   DoubleQuotesL,
-//   Separator,
-//   TextWrap,
-//   FormatClear,
-//   ArrowGoBackLine,
-//   ArrowGoForwardFill,
-//   AlignCenter,
-//   AlignRight,
-//   AlignLeft,
-//   AlignJustify,
-//   ImageAddLine,
-// } from "@@cuiller/cdk/react-icon"
 import styled from '@emotion/styled';
 import {
   RiBold,
