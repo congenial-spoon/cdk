@@ -1,6 +1,6 @@
 {
   "name": "@cuiller/rich-text",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "keywords": [],
   "license": "MIT",
@@ -17,6 +17,9 @@
     "typecheck": "tsc --noEmit",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@cuiller/react-icon": "workspace:*",

@@ -1,6 +1,6 @@
 {
   "name": "@cuiller/react-icon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Remix Icon for React",
   "license": "MIT",
   "sideEffects": [],

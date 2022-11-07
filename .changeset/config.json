@@ -1,15 +1,11 @@
 {
-  "$schema": "https://unpkg.com/@changesets/config@1.4.0/schema.json",
-  "changelog": [
-    "@changesets/changelog-github",
-    { "repo": "congenial-spoon/cdk" }
-  ],
+  "$schema": "https://unpkg.com/@changesets/config@2.2.0/schema.json",
+  "changelog": "@changesets/cli/changelog",
   "commit": false,
+  "fixed": [],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
-    "onlyUpdatePeerDependentsWhenOutOfRange": true
-  }
+  "ignore": []
 }

@@ -1,6 +1,6 @@
 {
   "name": "@cuiller/cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "generator",
   "keywords": [
     "generator"
@@ -17,6 +17,9 @@
     "dist",
     "bin"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "pnpm build:fast --watch",
     "clean": "rimraf dist .turbo",
