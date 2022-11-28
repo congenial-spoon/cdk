@@ -1,12 +1,12 @@
 {
-  "name": "@chakra-ui/{{componentName}}",
-  "version": "2.0.0",
+  "name": "@cuiller/{{componentName}}",
+  "version": "0.0.1",
   "description": "{{description}}",
   "keywords": [
     "{{componentName}}"
   ],
-  "author": "Segun Adebayo <sage@adebayosegun.com>",
-  "homepage": "https://github.com/chakra-ui/chakra-ui#readme",
+  "author": "TinsFox <fox@tinsfox.com>",
+  "homepage": "https://github.com/congenial-spoon/cdk#readme",
   "license": "MIT",
   "main": "src/index.ts",
   "sideEffects": false,
@@ -18,15 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chakra-ui/chakra-ui.git",
+    "url": "git+https://github.com/congenial-spoon/cdk.git",
     "directory": "{{outDir}}/{{componentName}}"
   },
   "bugs": {
-    "url": "https://github.com/chakra-ui/chakra-ui/issues"
+    "url": "https://github.com/congenial-spoon/cdk/issues"
   },
   "scripts": {
     "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "dev": "pnpm build:fast -- --watch",
+    "dev": "pnpm build:fast --watch",
     "clean": "rimraf dist .turbo",
     "typecheck": "tsc --noEmit",
     "build:fast": "tsup src/index.ts --format=esm,cjs",

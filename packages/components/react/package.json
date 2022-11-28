@@ -1,6 +1,6 @@
 {
   "name": "@cuiller/cdk-react",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "cdk",
   "main": "src/index.ts",
   "files": [
@@ -11,7 +11,8 @@
     "access": "public"
   },
   "dependencies": {
-    "@cuiller/rich-text": "workspace:*"
+    "@cuiller/rich-text": "workspace:*",
+    "@cuiller/lark-auth": "workspace:*"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",

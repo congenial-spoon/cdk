@@ -1,0 +1,47 @@
+{
+  "name": "@cuiller/date-utils",
+  "version": "0.0.1",
+  "description": "date",
+  "keywords": [
+    "date-utils"
+  ],
+  "author": "TinsFox <fox@tinsfox.com>",
+  "homepage": "https://github.com/congenial-spoon/cdk#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congenial-spoon/cdk.git",
+    "directory": "utilities/date-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/congenial-spoon/cdk/issues"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format=esm,cjs --dts",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src/index.ts --format=esm,cjs",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "dayjs": ">=1.11.6"
+  },
+  "devDependencies": {
+    "clean-package": "2.1.1",
+    "react": "^18.0.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.6"
+  }
+}
