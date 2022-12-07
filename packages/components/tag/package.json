@@ -1,0 +1,49 @@
+{
+  "name": "@cuiller/tag",
+  "version": "0.0.1",
+  "description": "tag",
+  "keywords": [
+    "tag"
+  ],
+  "author": "TinsFox <fox@tinsfox.com>",
+  "homepage": "https://github.com/congenial-spoon/cdk#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congenial-spoon/cdk.git",
+    "directory": "components/Tag"
+  },
+  "bugs": {
+    "url": "https://github.com/congenial-spoon/cdk/issues"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format=esm,cjs --dts",
+    "dev": "pnpm build:fast --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src/index.ts --format=esm,cjs",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "tailwindcss": ">=3.2.4",
+    "autoprefixer": ">=10.4.13",
+    "postcss": ">=8.4.16"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "clean-package": "2.1.1",
+    "postcss": "^8.4.16",
+    "react": "^18.0.0",
+    "tailwindcss": "^3.2.4"
+  }
+}

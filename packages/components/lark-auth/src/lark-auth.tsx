@@ -33,5 +33,10 @@ export function LarkAuth(props: LarkAuthProps) {
     () => createScript(props.src || script, props?.onComplete),
     [props?.onComplete, props.src],
   );
-  return <div>LarkAuth</div>;
+  return (
+    <div className="">
+      LarkAuth
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    </div>
+  );
 }

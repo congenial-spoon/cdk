@@ -7,6 +7,18 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    {
+      /**
+       * Fix Storybook issue with PostCSS@8
+       * @see https://github.com/storybookjs/storybook/issues/12668#issuecomment-773958085
+       */
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   framework: '@storybook/react',
   core: {
@@ -14,16 +26,7 @@ module.exports = {
     disableTelemetry: true,
   },
   webpackFinal: async (config) => {
-    console.log(
-      'config.plugins.CaseSensitivePathsPlugin',
-      Array.isArray(config.plugins),
-    );
-    console.log(
-      'findIndex',
-      config.plugins.findIndex((ele) => ele === 'CaseSensitivePathsPlugin'),
-    );
     // delete config.plugins.CaseSensitivePathsPlugin
-    console.log('config', config.plugins['CaseSensitivePathsPlugin']);
     // config.resolve.alias = {
     //   ...config.resolve.alias,
     //   "@@cuiller/cdk/react-icon": path.resolve(
