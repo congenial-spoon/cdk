@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@cuiller/rich-text": "workspace:*",
-    "@cuiller/lark-auth": "workspace:*"
+    "@cuiller/lark-auth": "workspace:*",
+    "@cuiller/button": "workspace:*"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
