@@ -1,0 +1,62 @@
+{
+  "name": "@cuiller/styled-system",
+  "version": "0.0.1",
+  "description": "tailwindcss style",
+  "keywords": [
+    "styled-system"
+  ],
+  "homepage": "https://github.com/congenial-spoon/cdk#readme",
+  "bugs": {
+    "url": "https://github.com/congenial-spoon/cdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congenial-spoon/cdk.git",
+    "directory": "components/styled-system"
+  },
+  "license": "MIT",
+  "author": "TinsFox <fox@tinsfox.com>",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "clean": "rimraf dist .turbo",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore",
+    "typecheck": "tsc --noEmit",
+    "prepare": "pnpm build"
+  },
+  "devDependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "autoprefixer": "^10.2.1",
+    "clean-package": "2.1.1",
+    "jest": "^26.6.1",
+    "jest-diff": "^27.3.1",
+    "lodash-es": "^4.17.21",
+    "lodash.castarray": "^4.4.0",
+    "lodash.isplainobject": "^4.0.6",
+    "lodash.merge": "^4.6.2",
+    "postcss": "^8.2.3",
+    "postcss-selector-parser": "6.0.10",
+    "tailwindcss": "^3.2.2",
+    "typescript": "4.9.3",
+    "unbuild": "^1.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

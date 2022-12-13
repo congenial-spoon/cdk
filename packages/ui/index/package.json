@@ -1,0 +1,44 @@
+{
+  "name": "@cuiller/ui",
+  "version": "0.1.1-alpha.0",
+  "description": "cdk",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@cuiller/button": "workspace:0.0.2-alpha.0",
+    "@cuiller/lark-auth": "workspace:2.0.1-alpha.0",
+    "@cuiller/rich-text": "workspace:0.0.3-alpha.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "framer-motion": ">=4.0.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "author": "TinsFox <fox@tinsfox.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "clean-package": "2.1.1",
+    "framer-motion": "^6.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "scripts": {
+    "build": "JSX=1 tsup src/index.ts --dts",
+    "dev": "pnpm build:fast -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "JSX=1 tsup src/index.ts",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  }
+}

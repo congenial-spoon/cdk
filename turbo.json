@@ -1,22 +1,17 @@
 {
-  "$schema": "https://turborepo.org/schema.json",
-  "baseBranch": "origin/main",
+  "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "outputs": ["dist/**"],
-      "dependsOn": ["^build"]
-    },
-    "build:fast": {
-      "outputs": ["dist/**"],
-      "dependsOn": ["^build:fast"]
-    },
-    "dev": {
-      "cache": false
-    },
-    "typecheck": {
-      "cache": false,
-      "dependsOn": ["^typecheck"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".dist/**",
+        "storybook-static/**"
+      ]
     }
   },
-  "globalDependencies": ["tsconfig.json"]
+  "globalDependencies": [
+    "tsconfig.json"
+  ]
 }

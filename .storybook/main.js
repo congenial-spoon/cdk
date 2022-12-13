@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   stories: ['../packages/**/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: [
@@ -22,11 +20,11 @@ module.exports = {
   ],
   framework: '@storybook/react',
   core: {
-    builder: '@storybook/builder-webpack5',
     disableTelemetry: true,
+    builder: '@storybook/builder-webpack5',
   },
   webpackFinal: async (config) => {
-    // delete config.plugins.CaseSensitivePathsPlugin
+    delete config.plugins.CaseSensitivePathsPlugin;
     // config.resolve.alias = {
     //   ...config.resolve.alias,
     //   "@@cuiller/cdk/react-icon": path.resolve(

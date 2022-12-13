@@ -1,0 +1,20 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@cuiller/button": "0.0.1",
+    "@cuiller/lark-auth": "2.0.0",
+    "@cuiller/portal": "0.0.1",
+    "@cuiller/cdk-react": "0.1.0",
+    "@cuiller/rich-text": "0.0.2",
+    "@cuiller/tag": "0.0.1",
+    "@cuiller/upload": "0.0.1",
+    "@cuiller/vconsole": "0.0.1",
+    "@cuiller/react-icon": "0.0.2",
+    "@cuiller/date-utils": "0.0.1",
+    "@cuiller/cli": "0.0.2"
+  },
+  "changesets": [
+    "ten-mails-smash"
+  ]
+}
